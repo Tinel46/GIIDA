@@ -1,0 +1,145 @@
+Namespace(arch='resnet50', batch_size=32, bottleneck_dim=256, data='Office31', early=15, epochs=40, img_path='GIIDA_A2W', iters_per_epoch=500, log='logs/GIIDA/Office31/Office31_A2W', lr=0.01, lr_decay=0.75, lr_gamma=0.001, momentum=0.9, mu=2, multiprocessing_distributed=False, num_class=31, per_class_eval=False, phase='train', print_freq=100, q_length=3, root='/data/office31', seed=2, source='A', strongaug=True, target='W', temperature=1.8, trade_off1=0.5, trade_off2=1.0, trade_off3=0.5, transform_type='randomcrop', visual_T=True, weight_decay=0.001, workers=8)
+Base/train_GIIDA.py:129: UserWarning: You have chosen to seed training. This will turn on the CUDNN deterministic setting, which can slow down your training considerably! You may see unexpected behavior when restarting from checkpoints.
+  warnings.warn('You have chosen to seed training. '
+=> using pre-trained model 'resnet50'
+lr: 0.001
+ratio: 0.1
+/usr/local/lib/python3.6/dist-packages/torch/nn/functional.py:2247: UserWarning: reduction: 'mean' divides the total loss by both the batch size and the support size.'batchmean' divides only by the batch size, and aligns with the KL div math definition.'mean' will be changed to behave the same as 'batchmean' in the next major release.
+  warnings.warn("reduction: 'mean' divides the total loss by both the batch size and the support size."
+Epoch: [0][  0/500]	Loss 4.00 (4.00)	correct_m loss 0.11 (0.11)	SSL Ls 0.00 (0.00)	s_Acc 9.4 (9.4)	t_Acc 1.6 (1.6)	Reg Loss 0.98 (0.98)
+Epoch: [0][100/500]	Loss 0.98 (1.62)	correct_m loss 0.02 (0.04)	SSL Ls 0.06 (0.02)	s_Acc 90.6 (74.3)	t_Acc 73.4 (68.2)	Reg Loss 0.89 (0.93)
+Epoch: [0][200/500]	Loss 0.71 (1.23)	correct_m loss 0.01 (0.03)	SSL Ls 0.09 (0.05)	s_Acc 93.8 (82.6)	t_Acc 87.5 (75.5)	Reg Loss 0.80 (0.88)
+Epoch: [0][300/500]	Loss 0.52 (1.04)	correct_m loss 0.01 (0.02)	SSL Ls 0.07 (0.06)	s_Acc 96.9 (86.9)	t_Acc 90.6 (79.1)	Reg Loss 0.72 (0.84)
+Epoch: [0][400/500]	Loss 0.46 (0.91)	correct_m loss 0.01 (0.02)	SSL Ls 0.11 (0.07)	s_Acc 100.0 (89.3)	t_Acc 90.6 (82.0)	Reg Loss 0.70 (0.81)
+Test: [0/5]	Time  4.365 ( 4.365)	Loss 9.8204e-02 (9.8204e-02)	Acc@1  97.50 ( 97.50)	Acc@5 100.00 (100.00)
+ * Acc@1 95.597 Acc@5 99.371
+lr: 0.0007377879464668812
+ratio: 0.2
+Epoch: [1][  0/500]	Loss 0.48 (0.48)	correct_m loss 0.01 (0.01)	SSL Ls 0.11 (0.11)	s_Acc 96.9 (96.9)	t_Acc 96.9 (96.9)	Reg Loss 0.67 (0.67)
+Epoch: [1][100/500]	Loss 0.37 (0.43)	correct_m loss 0.01 (0.01)	SSL Ls 0.02 (0.09)	s_Acc 100.0 (98.9)	t_Acc 96.9 (95.9)	Reg Loss 0.63 (0.64)
+Epoch: [1][200/500]	Loss 0.34 (0.42)	correct_m loss 0.01 (0.01)	SSL Ls 0.05 (0.08)	s_Acc 100.0 (99.0)	t_Acc 93.8 (96.2)	Reg Loss 0.60 (0.63)
+Epoch: [1][300/500]	Loss 0.35 (0.41)	correct_m loss 0.01 (0.01)	SSL Ls 0.05 (0.08)	s_Acc 100.0 (99.1)	t_Acc 95.3 (96.4)	Reg Loss 0.61 (0.63)
+Epoch: [1][400/500]	Loss 0.35 (0.40)	correct_m loss 0.01 (0.01)	SSL Ls 0.02 (0.07)	s_Acc 100.0 (99.3)	t_Acc 93.8 (96.5)	Reg Loss 0.65 (0.62)
+Test: [0/5]	Time  2.525 ( 2.525)	Loss 4.4083e-02 (4.4083e-02)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.107 Acc@5 99.874
+lr: 0.0005946035575013606
+ratio: 0.30000000000000004
+Epoch: [2][  0/500]	Loss 0.33 (0.33)	correct_m loss 0.01 (0.01)	SSL Ls 0.02 (0.02)	s_Acc 100.0 (100.0)	t_Acc 96.9 (96.9)	Reg Loss 0.59 (0.59)
+Epoch: [2][100/500]	Loss 0.34 (0.36)	correct_m loss 0.01 (0.01)	SSL Ls 0.03 (0.04)	s_Acc 100.0 (99.7)	t_Acc 96.9 (96.9)	Reg Loss 0.61 (0.61)
+Epoch: [2][200/500]	Loss 0.36 (0.35)	correct_m loss 0.01 (0.01)	SSL Ls 0.08 (0.04)	s_Acc 100.0 (99.8)	t_Acc 98.4 (96.8)	Reg Loss 0.59 (0.61)
+Epoch: [2][300/500]	Loss 0.35 (0.35)	correct_m loss 0.01 (0.01)	SSL Ls 0.06 (0.04)	s_Acc 100.0 (99.8)	t_Acc 95.3 (96.9)	Reg Loss 0.60 (0.61)
+Epoch: [2][400/500]	Loss 0.32 (0.35)	correct_m loss 0.01 (0.01)	SSL Ls 0.00 (0.04)	s_Acc 100.0 (99.8)	t_Acc 98.4 (96.9)	Reg Loss 0.59 (0.60)
+Test: [0/5]	Time  2.573 ( 2.573)	Loss 9.6966e-02 (9.6966e-02)	Acc@1  98.12 ( 98.12)	Acc@5 100.00 (100.00)
+ * Acc@1 96.981 Acc@5 99.874
+lr: 0.0005029733718731742
+ratio: 0.4
+Epoch: [3][  0/500]	Loss 0.34 (0.34)	correct_m loss 0.01 (0.01)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 93.8 (93.8)	Reg Loss 0.58 (0.58)
+Epoch: [3][100/500]	Loss 0.32 (0.34)	correct_m loss 0.01 (0.01)	SSL Ls 0.02 (0.03)	s_Acc 100.0 (99.9)	t_Acc 98.4 (96.9)	Reg Loss 0.58 (0.60)
+Epoch: [3][200/500]	Loss 0.36 (0.34)	correct_m loss 0.02 (0.01)	SSL Ls 0.05 (0.03)	s_Acc 100.0 (99.9)	t_Acc 96.9 (97.1)	Reg Loss 0.60 (0.60)
+Epoch: [3][300/500]	Loss 0.33 (0.34)	correct_m loss 0.02 (0.01)	SSL Ls 0.02 (0.03)	s_Acc 100.0 (99.9)	t_Acc 95.3 (97.1)	Reg Loss 0.59 (0.60)
+Epoch: [3][400/500]	Loss 0.33 (0.34)	correct_m loss 0.02 (0.01)	SSL Ls 0.03 (0.03)	s_Acc 100.0 (99.9)	t_Acc 96.9 (97.1)	Reg Loss 0.59 (0.60)
+Test: [0/5]	Time  2.571 ( 2.571)	Loss 1.3713e-01 (1.3713e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+lr: 0.00043869133765083086
+ratio: 0.5
+Epoch: [4][  0/500]	Loss 0.35 (0.35)	correct_m loss 0.02 (0.02)	SSL Ls 0.03 (0.03)	s_Acc 100.0 (100.0)	t_Acc 96.9 (96.9)	Reg Loss 0.62 (0.62)
+Epoch: [4][100/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.04 (0.03)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.56 (0.59)
+Epoch: [4][200/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.03)	s_Acc 100.0 (99.9)	t_Acc 92.2 (97.2)	Reg Loss 0.58 (0.59)
+Epoch: [4][300/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.02 (0.03)	s_Acc 100.0 (99.9)	t_Acc 98.4 (97.2)	Reg Loss 0.59 (0.59)
+Epoch: [4][400/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (99.9)	t_Acc 95.3 (97.2)	Reg Loss 0.61 (0.59)
+Test: [0/5]	Time  2.535 ( 2.535)	Loss 1.4113e-01 (1.4113e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+lr: 0.0003907949713906802
+ratio: 0.6000000000000001
+Epoch: [5][  0/500]	Loss 0.31 (0.31)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.00)	s_Acc 100.0 (100.0)	t_Acc 90.6 (90.6)	Reg Loss 0.53 (0.53)
+Epoch: [5][100/500]	Loss 0.36 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.05 (0.02)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.3)	Reg Loss 0.62 (0.59)
+Epoch: [5][200/500]	Loss 0.31 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.03 (0.02)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.3)	Reg Loss 0.55 (0.59)
+Epoch: [5][300/500]	Loss 0.32 (0.33)	correct_m loss 0.01 (0.02)	SSL Ls 0.01 (0.02)	s_Acc 100.0 (99.9)	t_Acc 95.3 (97.3)	Reg Loss 0.59 (0.59)
+Epoch: [5][400/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.03 (0.02)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.3)	Reg Loss 0.59 (0.59)
+Test: [0/5]	Time  2.356 ( 2.356)	Loss 1.4822e-01 (1.4822e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 100.000
+lr: 0.0003535533905932738
+ratio: 0.7000000000000001
+Epoch: [6][  0/500]	Loss 0.30 (0.30)	correct_m loss 0.02 (0.02)	SSL Ls 0.02 (0.02)	s_Acc 100.0 (100.0)	t_Acc 98.4 (98.4)	Reg Loss 0.55 (0.55)
+Epoch: [6][100/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.02)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.62 (0.60)
+Epoch: [6][200/500]	Loss 0.34 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.02)	s_Acc 100.0 (100.0)	t_Acc 95.3 (97.2)	Reg Loss 0.62 (0.59)
+Epoch: [6][300/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 95.3 (97.2)	Reg Loss 0.59 (0.59)
+Epoch: [6][400/500]	Loss 0.30 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.2)	Reg Loss 0.54 (0.59)
+Test: [0/5]	Time  4.141 ( 4.141)	Loss 1.6331e-01 (1.6331e-01)	Acc@1  98.75 ( 98.75)	Acc@5  99.38 ( 99.38)
+ * Acc@1 97.233 Acc@5 99.623
+lr: 0.00032366118113821564
+ratio: 0.8
+Epoch: [7][  0/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.00)	s_Acc 100.0 (100.0)	t_Acc 98.4 (98.4)	Reg Loss 0.62 (0.62)
+Epoch: [7][100/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 100.0 (97.2)	Reg Loss 0.59 (0.59)
+Epoch: [7][200/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.60 (0.59)
+Epoch: [7][300/500]	Loss 0.28 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 93.8 (97.2)	Reg Loss 0.53 (0.59)
+Epoch: [7][400/500]	Loss 0.35 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.09 (0.02)	s_Acc 100.0 (100.0)	t_Acc 93.8 (97.2)	Reg Loss 0.58 (0.59)
+Test: [0/5]	Time  2.397 ( 2.397)	Loss 1.4584e-01 (1.4584e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.748
+lr: 0.0002990697562442441
+ratio: 0.9
+Epoch: [8][  0/500]	Loss 0.35 (0.35)	correct_m loss 0.02 (0.02)	SSL Ls 0.02 (0.02)	s_Acc 100.0 (100.0)	t_Acc 98.4 (98.4)	Reg Loss 0.64 (0.64)
+Epoch: [8][100/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.03 (0.02)	s_Acc 100.0 (100.0)	t_Acc 93.8 (97.3)	Reg Loss 0.56 (0.59)
+Epoch: [8][200/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.3)	Reg Loss 0.59 (0.59)
+Epoch: [8][300/500]	Loss 0.31 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.02)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.3)	Reg Loss 0.56 (0.59)
+Epoch: [8][400/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.61 (0.59)
+Test: [0/5]	Time  2.517 ( 2.517)	Loss 1.6560e-01 (1.6560e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+lr: 0.00027843766487352606
+ratio: 1.0
+Epoch: [9][  0/500]	Loss 0.31 (0.31)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.00)	s_Acc 100.0 (100.0)	t_Acc 98.4 (98.4)	Reg Loss 0.57 (0.57)
+Epoch: [9][100/500]	Loss 0.31 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 95.3 (97.2)	Reg Loss 0.57 (0.59)
+Epoch: [9][200/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.02)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.2)	Reg Loss 0.60 (0.59)
+Epoch: [9][300/500]	Loss 0.34 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.03 (0.01)	s_Acc 100.0 (100.0)	t_Acc 100.0 (97.2)	Reg Loss 0.62 (0.59)
+Epoch: [9][400/500]	Loss 0.32 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.59 (0.59)
+Test: [0/5]	Time  2.397 ( 2.397)	Loss 1.6486e-01 (1.6486e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 100.000
+lr: 0.00026084743001221456
+ratio: 1.0
+Epoch: [10][  0/500]	Loss 0.32 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (98.4)	Reg Loss 0.59 (0.59)
+Epoch: [10][100/500]	Loss 0.33 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.62 (0.59)
+Epoch: [10][200/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 100.0 (97.2)	Reg Loss 0.61 (0.59)
+Epoch: [10][300/500]	Loss 0.33 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 95.3 (97.2)	Reg Loss 0.61 (0.59)
+Epoch: [10][400/500]	Loss 0.34 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.04 (0.01)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.2)	Reg Loss 0.59 (0.59)
+Test: [0/5]	Time  2.218 ( 2.218)	Loss 1.6029e-01 (1.6029e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+lr: 0.0002456489898134416
+ratio: 1.0
+Epoch: [11][  0/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.00)	s_Acc 100.0 (100.0)	t_Acc 98.4 (98.4)	Reg Loss 0.62 (0.62)
+Epoch: [11][100/500]	Loss 0.31 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.57 (0.59)
+Epoch: [11][200/500]	Loss 0.33 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 95.3 (97.2)	Reg Loss 0.61 (0.59)
+Epoch: [11][300/500]	Loss 0.32 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.02 (0.01)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.2)	Reg Loss 0.57 (0.59)
+Epoch: [11][400/500]	Loss 0.32 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.2)	Reg Loss 0.59 (0.59)
+Test: [0/5]	Time  2.762 ( 2.762)	Loss 1.5539e-01 (1.5539e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+lr: 0.00023236808024254085
+ratio: 1.0
+Epoch: [12][  0/500]	Loss 0.36 (0.36)	correct_m loss 0.02 (0.02)	SSL Ls 0.05 (0.05)	s_Acc 100.0 (100.0)	t_Acc 96.9 (96.9)	Reg Loss 0.62 (0.62)
+Epoch: [12][100/500]	Loss 0.31 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 89.1 (97.2)	Reg Loss 0.59 (0.59)
+Epoch: [12][200/500]	Loss 0.31 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 93.8 (97.2)	Reg Loss 0.59 (0.59)
+Epoch: [12][300/500]	Loss 0.31 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.57 (0.59)
+Epoch: [12][400/500]	Loss 0.30 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 95.3 (97.2)	Reg Loss 0.56 (0.59)
+Test: [0/5]	Time  2.624 ( 2.624)	Loss 1.6953e-01 (1.6953e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+lr: 0.00022065006130979155
+ratio: 1.0
+Epoch: [13][  0/500]	Loss 0.31 (0.31)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.00)	s_Acc 100.0 (100.0)	t_Acc 96.9 (96.9)	Reg Loss 0.56 (0.56)
+Epoch: [13][100/500]	Loss 0.31 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 100.0 (97.2)	Reg Loss 0.57 (0.59)
+Epoch: [13][200/500]	Loss 0.32 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.61 (0.59)
+Epoch: [13][300/500]	Loss 0.33 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 100.0 (97.2)	Reg Loss 0.62 (0.59)
+Epoch: [13][400/500]	Loss 0.31 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 96.9 (97.2)	Reg Loss 0.58 (0.59)
+Test: [0/5]	Time  2.553 ( 2.553)	Loss 1.5377e-01 (1.5377e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+lr: 0.00021022410381342865
+ratio: 1.0
+Epoch: [14][  0/500]	Loss 0.33 (0.33)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (98.4)	Reg Loss 0.60 (0.60)
+Epoch: [14][100/500]	Loss 0.32 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.60 (0.59)
+Epoch: [14][200/500]	Loss 0.34 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.00 (0.01)	s_Acc 100.0 (100.0)	t_Acc 98.4 (97.2)	Reg Loss 0.63 (0.59)
+Epoch: [14][300/500]	Loss 0.32 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.01 (0.01)	s_Acc 100.0 (100.0)	t_Acc 100.0 (97.2)	Reg Loss 0.59 (0.59)
+Epoch: [14][400/500]	Loss 0.30 (0.32)	correct_m loss 0.02 (0.02)	SSL Ls 0.03 (0.01)	s_Acc 100.0 (100.0)	t_Acc 95.3 (97.2)	Reg Loss 0.55 (0.59)
+Test: [0/5]	Time  2.542 ( 2.542)	Loss 1.7098e-01 (1.7098e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.748
+best_acc1 = 97.2
+Test: [0/5]	Time  2.521 ( 2.521)	Loss 1.3713e-01 (1.3713e-01)	Acc@1  98.75 ( 98.75)	Acc@5 100.00 (100.00)
+ * Acc@1 97.233 Acc@5 99.874
+test_acc1 = 97.2
